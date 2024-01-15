@@ -55,18 +55,34 @@
          <!-- <span class="display-2--intro">Hi, I'm Nafesza Asyiqin</span> -->
             
  <style>
-   .container {
-    max-width: 100%;
-}
+    .dynamic-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 2rem; /* Adjust the font size as needed */
+      position: relative;
+    }
 
-   .dynamic-text {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 1vw solid #000; /* Using viewport width for border size */
-}
+    .dynamic-text::after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 1.2em; /* Adjust the height of the border animation */
+      border-right: 3px solid #000; /* You can adjust the border styling */
+      margin-left: 5px; /* Adjust the spacing between text and border animation */
+    }
 
-</style>
+    @media (max-width: 800px) {
+      .dynamic-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+
+      .dynamic-text::after {
+        height: 0.8em; /* Adjust the height of the border animation for smaller screens */
+      }
+    }
+  </style>
             
               <div class="col-md-6 intros text-end">
     <div class="video-box">
