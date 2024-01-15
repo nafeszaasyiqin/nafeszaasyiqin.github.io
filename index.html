@@ -52,7 +52,66 @@
       <!-- START THE CONTENT FOR THE INTRO  -->
       <div class="col-md-6 intros text-start">
         <h1 class="display-2">
-          <span class="display-2--intro">Hi, I'm Nafesza Asyiqin</span>
+         <!-- <span class="display-2--intro">Hi, I'm Nafesza Asyiqin</span> -->
+            
+<style>
+    .dynamic-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #000; /* You can adjust the border styling */
+    }
+  </style>
+
+            
+             <div class="col-md-6 intros text-end">
+    <div class="video-box">
+      <span id="dynamicText" class="display-2--intro dynamic-text"></span>
+    </div>
+  </div>
+
+  <!-- Your content goes here -->
+
+  <script>
+    // Text animation function
+    function animateText() {
+      const phrases = [
+        "Peek a boo! Welcome",
+        "Hi, I'm Nafesza Asyiqin"
+      ];
+
+      let textElement = document.getElementById("dynamicText");
+      let currentPhraseIndex = 0;
+      let currentText = "";
+      let letterIndex = 0;
+
+      function updateText() {
+        currentText = phrases[currentPhraseIndex].substring(0, letterIndex);
+        textElement.textContent = currentText;
+
+        if (letterIndex < phrases[currentPhraseIndex].length) {
+          letterIndex++;
+          setTimeout(updateText, 100); // Adjust the speed of the animation (milliseconds)
+        } else {
+          setTimeout(changePhrase, 1000); // Delay before changing to the next phrase
+        }
+      }
+
+      function changePhrase() {
+        letterIndex = 0;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(updateText, 500); // Delay before starting the next phrase
+      }
+
+      updateText(); // Start the animation
+    }
+
+    // Run the text animation when the page loads
+    window.onload = animateText;
+  </script>
+
+
+            
           <span class="display-2--description lh-base">
           A Computer Science enthusiast with a focus on Big Data Analytics. I've delved into various aspects of technology, from software development and coding to advanced data analysis.
           </span>
