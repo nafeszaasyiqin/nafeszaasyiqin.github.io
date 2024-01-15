@@ -57,13 +57,30 @@
           A Computer Science enthusiast with a focus on Big Data Analytics. I've delved into various aspects of technology, from software development and coding to advanced data analysis.
           </span>
         </h1>
+          <!--
          <button type="button" class="rounded-pill btn-rounded" href="#companies">Get in Touch" 
-       <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                        <button type="button" class="rounded-pill btn-rounded">Get in Touch" 
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
-         
           <span><i class="fas fa-arrow-right"></i></span>
-        </button>
+        </button> -->
+            <button type="button" class="rounded-pill btn-rounded" onclick="openPDF()">
+    Get in Touch
+    <span><i class="fas fa-arrow-right"></i></span>
+  </button>
+
+  <!-- Embed the PDF using the iframe tag -->
+  <div id="pdf-container" style="display:none;">
+    <iframe src="assets/resume.pdf" width="100%" height="600px" frameborder="0"></iframe>
+  </div>
+
+
+
+  <script>
+    function openPDF() {
+      // Show the PDF container when the button is clicked
+      document.getElementById('pdf-container').style.display = 'block';
+    }
+  </script>
+
+          
       </div>
       <!-- START THE CONTENT FOR THE VIDEO -->
       <div class="col-md-6 intros text-end">
