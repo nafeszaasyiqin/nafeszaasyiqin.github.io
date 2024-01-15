@@ -59,15 +59,27 @@
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 3px solid #000; /* You can adjust the border styling */
       font-size: 2rem; /* Adjust the font size as needed */
-      width: 100%; /* Ensure full width on smaller screens */
-      text-align: left; /* Align text to the left */
+      position: relative;
+    }
+
+    .dynamic-text::after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 1.2em; /* Adjust the height of the border animation */
+      border-right: 3px solid #000; /* You can adjust the border styling */
+      margin-left: 5px; /* Adjust the spacing between text and border animation */
     }
 
     @media (max-width: 768px) {
       .dynamic-text {
         font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+
+      .dynamic-text::after {
+        height: 0.8em; /* Adjust the height of the border animation for smaller screens */
       }
     }
   </style>
