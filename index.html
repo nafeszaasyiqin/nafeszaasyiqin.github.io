@@ -231,12 +231,19 @@
         <div class="typed-text">Apa , rerere, Guys</div>
     </div>
 </div>
+          <div class="hero-content">
+    <div class="hero-text">
+        <h2></h2>
+        <div class="typed-text">apaaaa, Hi, Guys</div>
+    </div>
+</div>
+
 
 <script>
     $(document).ready(function () {
-        if ($('.hero .hero-text h2').length == 1) {
+        if ($('.hero .hero-text .typed-text').length === 1) {
             var typed_strings = $('.hero .hero-text .typed-text').text();
-            var typed = new Typed('.hero .hero-text h2', {
+            var typed = new Typed('.hero .hero-text .typed-text', {
                 strings: typed_strings.split(', '),
                 typeSpeed: 100,
                 backSpeed: 20,
@@ -246,6 +253,7 @@
         }
     });
 </script>
+
 
 <h1 class="display-2">
     <span class="display-2--intro">I'm Nafesza Asyiqin</span>
