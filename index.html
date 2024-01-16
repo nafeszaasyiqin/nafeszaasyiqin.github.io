@@ -52,89 +52,6 @@
       <!-- START THE CONTENT FOR THE INTRO  -->
       <div class="col-md-6 intros text-start">
         <h1 class="display-2">
-<style>
-    .dynamic-text {
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      font-size: 2rem; /* Adjust the font size as needed */
-      border-right: 3px solid #000; /* You can adjust the border styling */
-      animation: typing 2s steps(22), blink-caret 0.5s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink-caret {
-      from, to { border-color: transparent; }
-      50% { border-color: #000; }
-    }
-
-    @media (max-width: 768px) {
-      .dynamic-text {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-      }
-    }
-</style>
-</head>
-<body>
-
-  <!-- Your content goes here -->
-
-  <div class="col-md-6 intros text-end">
-    <div class="video-box">
-      <span id="dynamicText" class="display-2--intro dynamic-text"></span>
-    </div>
-  </div>
-
-  <!-- Your content goes here -->
-
-  <script>
-    // Text animation function
-    function animateText() {
-      const phrases = [
-        "Peek a boo! Welcome",
-        "Hello",
-        "Annyeong",
-        "Nihao",
-        "Holla",
-        "Hey"
-      ];
-
-      let textElement = document.getElementById("dynamicText");
-      let currentPhraseIndex = 0;
-      let currentText = "";
-      let letterIndex = 0;
-
-      function updateText() {
-        currentText = phrases[currentPhraseIndex].substring(0, letterIndex);
-        textElement.textContent = currentText;
-      }
-
-      function changePhrase() {
-        letterIndex = 0;
-        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-      }
-
-      function type() {
-        updateText();
-        letterIndex++;
-        if (letterIndex <= phrases[currentPhraseIndex].length) {
-          setTimeout(type, 100); // Typing speed
-        } else {
-          changePhrase();
-          setTimeout(type, 500); // Delay before typing the next phrase
-        }
-      }
-
-      type(); // Start the animation
-    }
-
-    // Run the text animation when the page loads
-    window.onload = animateText;
-  </script>
 
     <span class="display-2--intro">I'm Nafesza Asyiqin</span>
 
@@ -879,17 +796,7 @@
    
     <script src="assets/vendors/js/glightbox.min.js"></script>
 
-    <script type="text/javascript">
-      const lightbox = GLightbox({
-        'touchNavigation': true,
-        'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
-        'type': 'video',
-        'source': 'youtube', //vimeo, youtube or local
-        'width': 900,
-        'autoPlayVideos': 'true',
-});
-    
-    </script>
+ 
      <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
