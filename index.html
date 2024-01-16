@@ -52,29 +52,72 @@
       <!-- START THE CONTENT FOR THE INTRO  -->
       <div class="col-md-6 intros text-start">
         <h1 class="display-2">
-      <span class="display-2--intro">Hi, I'm Asyiqin</span>
-<div class="typed-text">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
-</div>
 
-<script>
-// Typed Initiate
-if ($('.typed-text').length == 1) {
-    var introText = "Hi, I'm Asyiqin";
-    var dynamicText = "Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer";
-    
-    // Initialize the static intro text
-    $('.display-2--intro').text(introText);
-    
-    // Initialize Typed for dynamic text
-    var typed = new Typed('.typed-text', {
-        strings: dynamicText.split(', '),
-        typeSpeed: 100,
-        backSpeed: 20,
-        smartBackspace: false,
-        loop: true
-    });
-}
-</script>
+            <style>
+    .dynamic-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #000; /* You can adjust the border styling */
+      font-size: 2rem; /* Adjust the font size as needed */
+    }
+
+    @media (max-width: 768px) {
+      .dynamic-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your content goes here -->
+
+  <div class="col-md-6 intros text-end">
+    <div class="video-box">
+      <span id="dynamicText" class="display-2--intro dynamic-text"></span>
+    </div>
+  </div>
+
+  <!-- Your content goes here -->
+
+  <script>
+    // Text animation function
+    function animateText() {
+      const phrases = [
+        "Peek a boo! Welcome",
+        "Hi, I'm Nafesza Asyiqin"
+      ];
+
+      let textElement = document.getElementById("dynamicText");
+      let currentPhraseIndex = 0;
+      let currentText = "";
+      let letterIndex = 0;
+
+      function updateText() {
+        currentText = phrases[currentPhraseIndex].substring(0, letterIndex);
+        textElement.textContent = currentText;
+
+        if (letterIndex < phrases[currentPhraseIndex].length) {
+          letterIndex++;
+          setTimeout(updateText, 100); // Adjust the speed of the animation (milliseconds)
+        } else {
+          setTimeout(changePhrase, 1000); // Delay before changing to the next phrase
+        }
+      }
+
+      function changePhrase() {
+        letterIndex = 0;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(updateText, 500); // Delay before starting the next phrase
+      }
+
+      updateText(); // Start the animation
+    }
+
+    // Run the text animation when the page loads
+    window.onload = animateText;
+  </script>
 
   <!-- Your content goes here -->
 
