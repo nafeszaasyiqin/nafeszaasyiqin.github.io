@@ -48,6 +48,10 @@
 
 <section id="home" class="intro-section">
   <div class="container">
+
+    <div class="row align-items-center text-white">
+      <!-- START THE CONTENT FOR THE INTRO  -->
+      <div class="col-md-6 intros text-start">
 <style>
     .hero {
     position: relative;
@@ -219,33 +223,29 @@
 }
     </style>
 
-
-      
-       <div class="hero-content">
-        <div class="hero-text">
-            <h2></h2>
-            <div class="typed-text">Assalam, Hi, Guys</div>
-        </div>
+      <div class="hero-content">
+    <div class="hero-text">
+        <h2></h2>
+        <div class="typed-text">Hi, Hi, Guys</div>
     </div>
-      
+</div>
+
 <script>
-     $(document).ready(function() {
-    if ($('.hero .hero-text h2').length == 1) {
-        var typed_strings = $('.hero .hero-text .typed-text').text();
-        var typed = new Typed('.hero .hero-text h2', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
-    }
-});</script>
+    $(document).ready(function () {
+        if ($('.hero .hero-text h2').length == 1) {
+            var typed_strings = $('.hero .hero-text .typed-text').text();
+            var typed = new Typed('.hero .hero-text h2', {
+                strings: typed_strings.split(', '),
+                typeSpeed: 100,
+                backSpeed: 20,
+                smartBackspace: false,
+                loop: true
+            });
+        }
+    });
+</script>
 
-
-    <div class="row align-items-center text-white">
-      <!-- START THE CONTENT FOR THE INTRO  -->
-      <div class="col-md-6 intros text-start">
+          
         <h1 class="display-2">
      
     <span class="display-2--intro">I'm Nafesza Asyiqin</span>
