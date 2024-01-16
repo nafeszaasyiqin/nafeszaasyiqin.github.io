@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -202,21 +206,25 @@
 
     <div class="hero-text">
     <h2></h2>
-    <div class="typed-text">HELLLO, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
-     </div>  
+    <div class="typed-text">heeheh, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+</div>
+ 
 
-        <script>
-             if ($('.hero .hero-text h2').length == 1) {
-        var typed_strings = $('.hero .hero-text .typed-text').text();
-        var typed = new Typed('.hero .hero-text h2', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
-    }
-        </script>
+       <script>
+    $(document).ready(function() {
+        if ($('.hero-text h2').length == 1) {
+            var typed_strings = $('.hero-text .typed-text').text();
+            var typed = new Typed('.hero-text h2', {
+                strings: typed_strings.split(', '),
+                typeSpeed: 100,
+                backSpeed: 20,
+                smartBackspace: false,
+                loop: true
+            });
+        }
+    });
+</script>
+
             
     <span class="display-2--intro">I'm Nafesza Asyiqin</span>
 
