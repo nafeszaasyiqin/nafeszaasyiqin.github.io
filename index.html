@@ -61,7 +61,7 @@
   .dynamic-text-container {
     display: inline-block;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
     width: 100%; /* Allow the container to take full width */
     max-width: 100%; /* Set a maximum width for the container */
     font-size: 4rem;
@@ -108,7 +108,7 @@
 
 <script>
   function animateText() {
-    const phrases = ["Hi", "Hello", "Hey", "Annyeong"];
+    const phrases = ["Hi!", "Hello!", "Hey!", "Annyeong!"];
     const containerElement = document.getElementById("dynamicText");
     const textElement = containerElement.querySelector(".dynamic-text");
 
@@ -229,24 +229,59 @@
       <h1 class="display-3 fw-bold">About Me</h1>
       <div class="heading-line mb-1"></div>
     </div>
- <!-- START THE DESCRIPTION CONTENT  -->
+    <!-- START THE DESCRIPTION CONTENT -->
     <div class="row pt-2 pb-2 mt-0 mb-3">
       <div class="col-md-6 border-right">
         <div class="bg-white p-3">
           <h2 class="fw-bold text-capitalize text-center">
-           Education Journey
+            Education Journey
           </h2>
         </div>
       </div>
       <div class="col-md-6">
         <div class="bg-white p-4 text-start">
           <h2 class="fw-bold text-capitalize text-center">
-          Work Experience
+            Work Experience
+            <button class="btn btn-link" onclick="toggleTimeline()">Show Timeline</button>
           </h2>
+          <div id="timeline" style="display:none;">
+            <!-- Your timeline content goes here -->
+            <div class="timeline">
+              <div class="timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2019</span>
+                </div>
+                <div class="timeline-info">
+                  <h3><span>Project Manager</span><small>Best Studio</small></h3>
+                  <p>Proin ornare non purus ut rutrum. Nulla facilisi. Aliquam laoreet libero ac pharetra feugiat. Cras ac fermentum nunc, a faucibus nunc.</p>
+                </div>
+              </div>
+
+              <div class="timeline-wrapper">
+                <div class="timeline-yr">
+                  <span>2018</span>
+                </div>
+                <div class="timeline-info">
+                  <h3><span>UX Designer</span><small>Digital Ace</small></h3>
+                  <p>Fusce rutrum augue id orci rhoncus molestie. Nunc auctor dignissim lacus vel iaculis.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End of your timeline content -->
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    function toggleTimeline() {
+      var timeline = document.getElementById('timeline');
+      timeline.style.display = (timeline.style.display === 'none') ? 'block' : 'none';
+    }
+  </script>
+</section>
+
 <!--
   <!-- START THE CONTENT FOR THE SERVICES 
   <div class="container">
