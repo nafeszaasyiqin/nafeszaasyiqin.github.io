@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -227,22 +228,25 @@
       <div class="hero-content">
     <div class="hero-text">
         <h2></h2>
-        <div class="typed-text">POPO, Hi, Guys</div>
+        <div class="typed-text">APEKAU, Hi, Guys</div>
     </div>
 </div>
 
 <script>
-    if ($('.hero .hero-text h2').length == 1) {
-        var typed_strings = $('.hero .hero-text .typed-text').text();
-        var typed = new Typed('.hero .hero-text h2', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
-    }
+    $(document).ready(function () {
+        if ($('.hero .hero-text h2').length == 1) {
+            var typed_strings = $('.hero .hero-text .typed-text').text();
+            var typed = new Typed('.hero .hero-text h2', {
+                strings: typed_strings.split(', '),
+                typeSpeed: 100,
+                backSpeed: 20,
+                smartBackspace: false,
+                loop: true
+            });
+        }
+    });
 </script>
+
 
 
           
