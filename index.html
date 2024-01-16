@@ -226,6 +226,7 @@
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////
                          START SECTION 4 - ABOUT  
 ///////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- Include Animate.css in the head section of your HTML -->
 
 <style>
   .timeline {
@@ -234,6 +235,7 @@
   }
 
   .timeline-wrapper {
+    position: relative;
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
@@ -266,6 +268,16 @@
   .timeline-info p {
     margin-top: 10px;
     color: #555;
+  }
+
+  .timeline-line {
+    position: absolute;
+    background-color: #ffa07a;
+    width: 3px;
+    top: 50%;
+    left: 40px;
+    height: 100%;
+    transform: translateY(-50%);
   }
 </style>
 
@@ -302,6 +314,7 @@
                   <h3><span>Product Designer</span><small>ABC Design Co.</small></h3>
                   <p>Implemented innovative design solutions for products, ensuring a seamless and visually appealing user experience.</p>
                 </div>
+                <div class="timeline-line"></div>
               </div>
 
               <div class="timeline-wrapper animate__animated animate__fadeIn">
@@ -312,6 +325,7 @@
                   <h3><span>Freelance Designer and NFT Creator</span><small>Online Platform</small></h3>
                   <p>Expressed creativity through unique and visually stunning artwork, contributing to the NFT space and connecting with a global audience.</p>
                 </div>
+                <div class="timeline-line"></div>
               </div>
             </div>
             <!-- End of your animated timeline content -->
@@ -328,6 +342,8 @@
     }
   </script>
 </section>
+
+
 
 
 
