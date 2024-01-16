@@ -58,14 +58,17 @@
 
   <!-- Your content goes here -->
 <style>
-  .dynamic-text {
+  .dynamic-text-container {
     display: inline-block;
     white-space: nowrap;
+    overflow: hidden;
+    width: 250px; /* Set a fixed width for the container */
     font-size: 2rem;
+    text-align: left; /* Align text to the left */
   }
 
   @media (max-width: 768px) {
-    .dynamic-text {
+    .dynamic-text-container {
       font-size: 1.5rem;
     }
   }
@@ -73,22 +76,25 @@
 
 <div class="col-md-6 intros text-end">
   <div class="video-box">
-    <span id="dynamicText" class="display-2--intro dynamic-text"></span>
+    <div id="dynamicText" class="display-2--intro dynamic-text-container">
+      <span class="dynamic-text"></span>
+    </div>
   </div>
 </div>
 
 <script>
   function animateText() {
-    const phrases = ["Hi", "Hello", "Welcome", "Peeka"];
-    const textElement = document.getElementById("dynamicText");
+    const phrases = ["Hi", "Hello", "Hey", "Annyeong"];
+    const containerElement = document.getElementById("dynamicText");
+    const textElement = containerElement.querySelector(".dynamic-text");
 
     const options = {
       strings: phrases,
-      typeSpeed: 100, // typing speed in milliseconds
-      backSpeed: 50, // backspacing speed in milliseconds
-      backDelay: 1000, // delay before starting to backspace
-      startDelay: 500, // delay before starting the animation
-      loop: true, // loop through phrases
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 1000,
+      startDelay: 500,
+      loop: true,
     };
 
     const typed = new Typed(textElement, options);
