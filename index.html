@@ -67,6 +67,31 @@
         font-size: 1.5rem; /* Adjust font size for smaller screens */
       }
     }
+<style>
+    .dynamic-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 2rem; /* Adjust the font size as needed */
+      border-right: 3px solid #000; /* You can adjust the border styling */
+      animation: typing 2s steps(22), blink-caret 0.5s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #000; }
+    }
+
+    @media (max-width: 768px) {
+      .dynamic-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+    }
 </style>
 </head>
 <body>
@@ -97,34 +122,39 @@
       let currentPhraseIndex = 0;
       let currentText = "";
       let letterIndex = 0;
-      let backspace = false;
 
       function updateText() {
         currentText = phrases[currentPhraseIndex].substring(0, letterIndex);
         textElement.textContent = currentText;
-
-        if (!backspace && letterIndex < phrases[currentPhraseIndex].length) {
-          letterIndex++;
-          setTimeout(updateText, 100); // Typing speed
-        } else {
-          backspace = true;
-          if (letterIndex > 0) {
-            letterIndex--;
-            setTimeout(updateText, 50); // Backspace speed
-          } else {
-            backspace = false;
-            setTimeout(changePhrase, 500); // Delay before changing to the next phrase
-          }
-        }
       }
 
       function changePhrase() {
         letterIndex = 0;
         currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-        setTimeout(updateText, 500); // Delay before starting the next phrase
       }
 
-      updateText(); // Start the animation
+      function type() {
+        updateText();
+        letterIndex++;
+        if (letterIndex <= phrases[currentPhraseIndex].length) {
+          setTimeout(type, 100); // Typing speed
+        } else {
+          setTimeout(erase, 500); // Delay before erasing
+        }
+      }
+
+      function erase() {
+        updateText();
+        letterIndex--;
+        if (letterIndex >= 0) {
+          setTimeout(erase, 50); // Backspace speed
+        } else {
+          changePhrase();
+          setTimeout(type, 500); // Delay before typing the next phrase
+        }
+      }
+
+      type(); // Start the animation
     }
 
     // Run the text animation when the page loads
