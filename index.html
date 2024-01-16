@@ -58,42 +58,33 @@
 
   <!-- Your content goes here -->
 <style>
-  .text-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 2rem;
-  }
-
   .dynamic-text-container {
+    display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     width: 250px; /* Set a fixed width for the container */
-    text-align: left; /* Align text to the left */
+    font-size: 2rem;
+    text-align: left !important; /* Align text to the left */
   }
 
   @media (max-width: 768px) {
-    .text-container,
     .dynamic-text-container {
       font-size: 1.5rem;
     }
   }
 </style>
 
-<div class="col-md-6 intros text-start">
+<div class="col-md-6 intros text-end">
   <div class="video-box">
-    <div class="text-container">
-      <span class="static-text">IM NAFESZA ASYIQIN</span>
-      <div id="dynamicText" class="dynamic-text-container">
-        <span class="dynamic-text"></span>
-      </div>
+    <div id="dynamicText" class="display-2--intro dynamic-text-container">
+      <span class="dynamic-text"></span>
     </div>
   </div>
 </div>
 
 <script>
   function animateText() {
-    const phrases = ["123", "Hello", "Annyeong", "Peeka"];
+    const phrases = ["Hi", "Hello", "Hey", "Annyeong"];
     const containerElement = document.getElementById("dynamicText");
     const textElement = containerElement.querySelector(".dynamic-text");
 
@@ -111,7 +102,6 @@
 
   window.onload = animateText;
 </script>
-
 
 
 <h1 class="display-2">
