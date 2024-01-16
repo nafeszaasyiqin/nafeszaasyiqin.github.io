@@ -204,26 +204,29 @@
 <!----------------------------dfgfrgfufedjhdheidhifhdiwhfr-->
 <!----------------------------dfgfrgfufedjhdheidhifhdiwhfr-->  
 
-    <div class="hero-text">
+<div class="hero-text">
     <h2></h2>
-    <div class="typed-text">heeheh, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+    <div class="typed-text">Hello, Hi, Front End Developer, Apps Designer, Apps Developer</div>
 </div>
- 
 
-       <script>
+<script>
     $(document).ready(function() {
         if ($('.hero-text h2').length == 1) {
             var typed_strings = $('.hero-text .typed-text').text();
             var typed = new Typed('.hero-text h2', {
-                strings: typed_strings.split(', '),
+                strings: [""],  // Empty array to start with an empty h2
                 typeSpeed: 100,
                 backSpeed: 20,
                 smartBackspace: false,
                 loop: true
             });
+
+            // After Typed.js is initialized, set the strings to start the animation
+            typed.strings = typed_strings.split(', ');
         }
     });
 </script>
+
 
             
     <span class="display-2--intro">I'm Nafesza Asyiqin</span>
