@@ -52,21 +52,6 @@
       <!-- START THE CONTENT FOR THE INTRO  -->
       <div class="col-md-6 intros text-start">
         <h1 class="display-2">
-
-            <style>
-    .dynamic-text {
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #000; /* You can adjust the border styling */
-      font-size: 2rem; /* Adjust the font size as needed */
-    }
-
-    @media (max-width: 768px) {
-      .dynamic-text {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-      }
-    }
 <style>
     .dynamic-text {
       display: inline-block;
@@ -138,16 +123,6 @@
         letterIndex++;
         if (letterIndex <= phrases[currentPhraseIndex].length) {
           setTimeout(type, 100); // Typing speed
-        } else {
-          setTimeout(erase, 500); // Delay before erasing
-        }
-      }
-
-      function erase() {
-        updateText();
-        letterIndex--;
-        if (letterIndex >= 0) {
-          setTimeout(erase, 50); // Backspace speed
         } else {
           changePhrase();
           setTimeout(type, 500); // Delay before typing the next phrase
