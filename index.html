@@ -52,7 +52,8 @@
       <!-- START THE CONTENT FOR THE INTRO  -->
       <div class="col-md-6 intros text-start">
         <h1 class="display-2">
-<style>
+
+            <style>
     .dynamic-text {
       display: inline-block;
       white-space: nowrap;
@@ -96,18 +97,22 @@
       let currentPhraseIndex = 0;
       let currentText = "";
       let letterIndex = 0;
+      let backspace = false;
 
       function updateText() {
         currentText = phrases[currentPhraseIndex].substring(0, letterIndex);
         textElement.textContent = currentText;
 
-        if (letterIndex < phrases[currentPhraseIndex].length) {
+        if (!backspace && letterIndex < phrases[currentPhraseIndex].length) {
           letterIndex++;
-          setTimeout(updateText, 100); // Adjust the speed of the animation (milliseconds)
+          setTimeout(updateText, 100); // Typing speed
         } else {
-          if (currentPhraseIndex === 1) {
-            setTimeout(changePhrase, 1000); // Delay before changing to the next phrase
+          backspace = true;
+          if (letterIndex > 0) {
+            letterIndex--;
+            setTimeout(updateText, 50); // Backspace speed
           } else {
+            backspace = false;
             setTimeout(changePhrase, 500); // Delay before changing to the next phrase
           }
         }
@@ -126,6 +131,7 @@
     window.onload = animateText;
   </script>
 
+    <span class="display-2--intro">I'm Nafesza Asyiqin</span>
 
   <!-- Your content goes here 
 
