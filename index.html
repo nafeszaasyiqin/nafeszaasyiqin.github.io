@@ -53,25 +53,23 @@
       <div class="col-md-6 intros text-start">
         <h1 class="display-2">
 <style>
-  /* Add a class for handwriting font */
-  .handwriting {
-    font-family: 'YourHandwritingFont', cursive; /* Replace 'YourHandwritingFont' with the actual font you want to use */
-  }
-
-  .dynamic-text {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #000;
-    font-size: 2rem;
-  }
-
-  @media (max-width: 768px) {
     .dynamic-text {
-      font-size: 1.5rem;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #000; /* You can adjust the border styling */
+      font-size: 2rem; /* Adjust the font size as needed */
     }
-  }
+
+    @media (max-width: 768px) {
+      .dynamic-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+    }
 </style>
+</head>
+<body>
+
   <!-- Your content goes here -->
 
   <div class="col-md-6 intros text-end">
@@ -81,45 +79,53 @@
   </div>
 
   <!-- Your content goes here -->
-<script>
-  // Text animation function
-  function animateText() {
-    const phrases = [
-      ["Welcome", "Hello", "Annyeong", "Nihao", "Holla", "Hey"],
-      "Hi, I'm Nafesza Asyiqin"
-    ];
 
-    let textElement = document.getElementById("dynamicText");
-    let currentPhraseIndex = 0;
-    let currentText = "";
-    let letterIndex = 0;
+  <script>
+    // Text animation function
+    function animateText() {
+      const phrases = [
+        "Peek a boo! Welcome",
+        "Hello",
+        "Annyeong",
+        "Nihao",
+        "Holla",
+        "Hey"
+      ];
 
-    function updateText() {
-      let currentPhrase = phrases[currentPhraseIndex];
-      currentText = currentPhrase[0].substring(0, letterIndex);
-      textElement.textContent = currentText;
+      let textElement = document.getElementById("dynamicText");
+      let currentPhraseIndex = 0;
+      let currentText = "";
+      let letterIndex = 0;
 
-      if (letterIndex < currentPhrase[0].length) {
-        letterIndex++;
-        setTimeout(updateText, 100);
-      } else {
-        setTimeout(changePhrase, 1000);
+      function updateText() {
+        currentText = phrases[currentPhraseIndex].substring(0, letterIndex);
+        textElement.textContent = currentText;
+
+        if (letterIndex < phrases[currentPhraseIndex].length) {
+          letterIndex++;
+          setTimeout(updateText, 100); // Adjust the speed of the animation (milliseconds)
+        } else {
+          if (currentPhraseIndex === 1) {
+            setTimeout(changePhrase, 1000); // Delay before changing to the next phrase
+          } else {
+            setTimeout(changePhrase, 500); // Delay before changing to the next phrase
+          }
+        }
       }
+
+      function changePhrase() {
+        letterIndex = 0;
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(updateText, 500); // Delay before starting the next phrase
+      }
+
+      updateText(); // Start the animation
     }
 
-    function changePhrase() {
-      letterIndex = 0;
-      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-      textElement.classList.toggle("handwriting", currentPhraseIndex === 0); // Apply handwriting font class for the first line
-      setTimeout(updateText, 500);
-    }
+    // Run the text animation when the page loads
+    window.onload = animateText;
+  </script>
 
-    updateText();
-  }
-
-  // Run the text animation when the page loads
-  window.onload = animateText;
-</script>
 
   <!-- Your content goes here 
 
