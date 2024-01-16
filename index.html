@@ -57,7 +57,22 @@
 
 
   <!-- Your content goes here -->
+ <style>
+    .dynamic-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #000; /* You can adjust the border styling */
+      font-size: 2rem; /* Adjust the font size as needed */
+    }
 
+    @media (max-width: 768px) {
+      .dynamic-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
+          
   <div class="col-md-6 intros text-end">
     <div class="video-box">
       <span id="dynamicText" class="display-2--intro dynamic-text"></span>
@@ -70,9 +85,9 @@
     // Text animation function
     function animateText() {
       const phrases = [
-        "Hi",
+        "123",
         "Hello",  "Annyeong",
-        "Nihao", 
+        "Peeka", 
       ];
 
       let textElement = document.getElementById("dynamicText");
@@ -108,7 +123,7 @@
 
 <h1 class="display-2">
     <span class="display-2--intro">I'm Nafesza Asyiqin</span>
-</h1>
+
   <!-- Your content goes here -->
 
  
@@ -121,7 +136,8 @@
          <button type="button" class="rounded-pill btn-rounded" href="#companies">Get in Touch" 
           <span><i class="fas fa-arrow-right"></i></span>
         </button> -->
-            <button type="button" class="rounded-pill btn-rounded" onclick="openPDF()">
+            
+          <button type="button" class="rounded-pill btn-rounded" onclick="openPDF()">
    View My Resume
     <span><i class="fas fa-arrow-right"></i></span>
   </button>
