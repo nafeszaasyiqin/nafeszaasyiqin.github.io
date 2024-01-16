@@ -52,23 +52,30 @@
       <!-- START THE CONTENT FOR THE INTRO  -->
       <div class="col-md-6 intros text-start">
         <h1 class="display-2">
-       <span class="display-2--intro">Hi, I'm Nafesza Asyiqin</span>
-            <div class="typed-text">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
-                            </div>
+      <span class="display-2--intro">Hi, I'm Asyiqin</span>
+<div class="typed-text">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+</div>
 
-        <script>
-             // Typed Initiate
-    if ($('.hero .hero-text h2').length == 1) {
-        var typed_strings = $('.hero .hero-text .typed-text').text();
-        var typed = new Typed('.hero .hero-text h2', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
-    }
-        </script>
+<script>
+// Typed Initiate
+if ($('.typed-text').length == 1) {
+    var introText = "Hi, I'm Asyiqin";
+    var dynamicText = "Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer";
+    
+    // Initialize the static intro text
+    $('.display-2--intro').text(introText);
+    
+    // Initialize Typed for dynamic text
+    var typed = new Typed('.typed-text', {
+        strings: dynamicText.split(', '),
+        typeSpeed: 100,
+        backSpeed: 20,
+        smartBackspace: false,
+        loop: true
+    });
+}
+</script>
+
   <!-- Your content goes here -->
 
  
