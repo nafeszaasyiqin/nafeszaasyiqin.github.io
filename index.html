@@ -286,8 +286,6 @@
     vertical-align: middle;
     margin-left: 15px;
   }
-	
-.education-timeline, .work-experience-timeline {}
 </style>
 
 
@@ -303,7 +301,8 @@
     <!-- START THE DESCRIPTION CONTENT -->
 
     <div class="row pt-2 pb-2 mt-0 mb-3">
-      <div class="col-md-6 border-right">
+     <div class="col-md-6 text-center"> <!-- Updated class for both columns -->
+       
         <div class="bg-white p-3">
           <h2 class="fw-bold text-capitalize text-center">
             Academic Journey
@@ -354,7 +353,7 @@
 <!-- ################################################################################################ --> 
 <!-- ################################################################################################ --> 
         
-      <div class="col-md-6-left">
+        <div class="col-md-6 text-start"> 
         <div class="bg-white p-4 text-start">
           <h2 class="fw-bold text-capitalize text-center">
     Work Experience
@@ -403,13 +402,16 @@
   </div>
 
   <!-- Your existing JavaScript -->
-<script>
-  // Automatically open the curtain when the page loads
-  document.addEventListener('DOMContentLoaded', function() {
-    var timeline = document.getElementById('timeline');
-    timeline.style.display = 'block';
-  });
-</script>
+ <script>
+    // Automatically open the curtain when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      var educationTimeline = document.getElementById('education-timeline');
+      educationTimeline.style.display = 'block';
+
+      var workExperienceTimeline = document.getElementById('work-experience-timeline');
+      workExperienceTimeline.style.display = 'block';
+    });
+  </script>
 
 <!-- Marvel template JavaScript -->
 <script src="path/to/marvel-template.js"></script>
