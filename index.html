@@ -286,30 +286,8 @@
     vertical-align: middle;
     margin-left: 15px;
   }
-    body {
-    background-color: white;
-    transition: background-color 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-    transform: perspective(600px);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    will-change: transform;
-  }
-
-  timeline {
-    display: none;
-    transform: translate3d(0, 0, 0) scale(0.5);
-    transition: transform 1.25s cubic-bezier(0.215, 0.61, 0.355, 1), box-shadow 1.25s cubic-bezier(0.215, 0.61, 0.355, 1), box-shadow 1.25s cubic-bezier(0.215, 0.61, 0.355, 1),
-      filter 1.25s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 1.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-    will-change: transform;
-  }
-
-  timeline.animate__animated.animate__fadeIn {
-    display: block;
-    transform: translate3d(0, 0, 0) scale(1);
-  } 
+	
+.education-timeline, .work-experience-timeline {}
 </style>
 
 
@@ -328,51 +306,49 @@
       <div class="col-md-6 border-right">
         <div class="bg-white p-3">
           <h2 class="fw-bold text-capitalize text-center">
-            Education Journey
+            Academic Journey
           </h2>
 
-         <div id="timeline" style="display:block;" class="animate__animated animate__fadeIn">
-            <!-- Your animated timeline content -->
-            <div class="timeline">
-                
-              <div class="timeline-wrapper animate__animated animate__fadeIn">
-                <div class="timeline-yr">
-                  <span>2024</span>
-                </div> 
-                <div class="timeline-info">
-                  <h3><span>Bachelor of Computer Science(Hons.) </span><small> Universiti Teknologi MARA  </small></h3>
-			 <p> - Developed strong passion and skills in software development, big data analytics, database management</p> 
-			<p> - Completed with CGPA of 3.90 and Dean list award from Semester 1 until Semenster 6</p> 
-			<p> - Scholarship sponsorship from UiTM Endowment</p> 
-			
-                       </div>
-                <div class="timeline-line"></div>
-              </div>
-            <!-- ################################################################################################ -->
-              <div class="timeline-wrapper animate__animated animate__fadeIn">
-                <div class="timeline-yr">
-                  <span>2020</span>
-                </div>
-                <div class="timeline-info">
-                  <h3><span> Science Module III Creator</span><small> Johor Matriculation College </small></h3>
-                 <p> - Developed basic passion in programming</p> 
-		 <p> - Completed with CGPA of 4.00 and awarded with Dean's List and participated KAKOM </p>     <div class="timeline-line"></div>
-              </div>
-          <!-- ################################################################################################ -->  
-                  <div class="timeline-wrapper animate__animated animate__fadeIn">
-                <div class="timeline-yr">
-                  <span>2018</span>
-                </div> 
-                <div class="timeline-info">
-                  <h3><span>Science Stream </span><small> SMK Bukit Naning </small></h3>
-               <p> -Completed with 7 A's in SPM and awarded as the Best Student </p> 
-			<p> - Completed with CGPA of 3.90 and Dean list award from Semester 1 until Semenster 6</p>   
-		</div>
-                <div class="timeline-line"></div>
-              </div>
+       <div id="education-timeline" class="timeline">
+  <!-- Your animated timeline content -->
+  <div class="timeline-wrapper">
+    <div class="timeline-yr">
+      <span>2024</span>
+    </div>
+    <div class="timeline-info">
+      <h3><span>Bachelor of Computer Science(Hons.) </span><small> Universiti Teknologi MARA </small></h3>
+      <p> - Developed strong passion and skills in software development, big data analytics, database management</p>
+      <p> - Completed with CGPA of 3.90 and Dean list award from Semester 1 until Semester 6</p>
+      <p> - Scholarship sponsorship from UiTM Endowment</p>
+    </div>
+    <div class="timeline-line"></div>
+  </div>
+  <!-- ################################################################################################ -->
+  <div class="timeline-wrapper">
+    <div class="timeline-yr">
+      <span>2020</span>
+    </div>
+    <div class="timeline-info">
+      <h3><span> Science Module III Creator</span><small> Johor Matriculation College </small></h3>
+      <p> - Developed basic passion in programming</p>
+      <p> - Completed with CGPA of 4.00 and awarded with Dean's List and participated KAKOM </p>
+    </div>
+    <div class="timeline-line"></div>
+  </div>
+  <!-- ################################################################################################ -->
+  <div class="timeline-wrapper">
+    <div class="timeline-yr">
+      <span>2018</span>
+    </div>
+    <div class="timeline-info">
+      <h3><span>Science Stream </span><small> SMK Bukit Naning </small></h3>
+      <p> - Completed with 7 A's in SPM and awarded as the Best Student </p>
+      <p> - Completed with CGPA of 3.90 and Dean list award from Semester 1 until Semester 6</p>
+    </div>
+    <div class="timeline-line"></div>
+  </div>
+</div>
 
-		
-        </div>
   
 
 <!-- ################################################################################################ --> 
@@ -383,11 +359,10 @@
           <h2 class="fw-bold text-capitalize text-center">
     Work Experience
   </h2>
-          <div id="timeline" style="display:block;" class="animate__animated animate__fadeIn">
+          <div id="work-experience-timeline" class="timeline">
             <!-- Your animated timeline content -->
-            <div class="timeline">
-                
-              <div class="timeline-wrapper animate__animated animate__fadeIn">
+      
+            
                 <div class="timeline-yr">
                   <span>2023</span>
                 </div> 
@@ -396,9 +371,9 @@
                   <p>I gained hands-on experience in advanced data analysis and visualization using Excel, including VLOOKUP, Macros, and VBA. I also managed tickets, utilized SQL expertise to extract data, optimized RFCs, and demonstrated commitment to CSR through charity initiatives.</p>
                 </div>
                 <div class="timeline-line"></div>
-              </div>
+         
             <!-- ################################################################################################ -->
-              <div class="timeline-wrapper animate__animated animate__fadeIn">
+             
                 <div class="timeline-yr">
                   <span>2022</span>
                 </div>
@@ -406,9 +381,9 @@
                   <h3><span>Freelance Designer and NFT Creator</span><small> Online Platform </small></h3>
                   <p>I get to combine my passion for drawing and design. I love creating unique and visually stunning artwork and a fulfilling way to express my creativity and share with others.   </div>
                 <div class="timeline-line"></div>
-              </div>
+              
           <!-- ################################################################################################ -->  
-                  <div class="timeline-wrapper animate__animated animate__fadeIn">
+                
                 <div class="timeline-yr">
                   <span>2022</span>
                 </div> 
@@ -417,9 +392,8 @@
                   <p>I bring transferable skills such as attention to detail, problem solving, time management, teamwork and adaptability, which can be valuable in diverse industries.</p>
                 </div>
                 <div class="timeline-line"></div>
-              </div>
-                
-            </div>
+             
+          
             <!-- End of your animated timeline content -->
           </div>
         </div>
