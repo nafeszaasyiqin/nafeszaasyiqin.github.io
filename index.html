@@ -227,6 +227,7 @@
                          START SECTION 4 - ABOUT  
 ///////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!-- Include Animate.css in the head section of your HTML -->
+<link rel="stylesheet" href="path/to/marvel-template.css">
 
 <style>
   .timeline {
@@ -286,7 +287,8 @@
 
 <!-- Your HTML content -->
 <section id="services" class="services">
-  <div class="container">
+  <!-- Marvel template structure -->
+  <div class="marvel-container">
     <div class="row text-center">
       <h1 class="display-3 fw-bold">About Me</h1>
       <div class="heading-line mb-1"></div>
@@ -338,12 +340,17 @@
     </div>
   </div>
 
-  <script>
-    function toggleTimeline() {
-      var timeline = document.getElementById('timeline');
-      timeline.style.display = (timeline.style.display === 'none') ? 'block' : 'none';
-    }
-  </script>
+  <!-- Your existing JavaScript -->
+<script>
+  function toggleTimeline() {
+    var timeline = document.getElementById('timeline');
+    timeline.style.display = (timeline.style.display === 'none') ? 'block' : 'none';
+  }
+</script>
+
+<!-- Marvel template JavaScript -->
+<script src="path/to/marvel-template.js"></script>
+
 </section>
 
 
