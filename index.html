@@ -237,53 +237,57 @@
 
   .timeline-wrapper {
     position: relative;
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    padding: 22px 0;
+  }
+
+  .timeline-wrapper:last-child:before {
+    height: 0;
+  }
+
+  .timeline-wrapper:before {
+    content: "";
+    background: #474559;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 38px;
   }
 
   .timeline-yr {
-    width: 80px;
-    background-color: #ffc200; /* Marvel's color */
-    padding: 10px;
+    background: #474559;
+    border-radius: 100%;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
     text-align: center;
-    border-radius: 8px;
-    margin-right: 20px;
+  }
+
+  .timeline-yr span {
     color: #ffffff;
+    font-size: 16px;
     font-weight: bold;
+    display: block;
+    line-height: 75px;
   }
 
   .timeline-info {
-    flex: 1;
-  }
-
-  .timeline-info h3 {
-    margin: 0;
-    color: #212121; /* Marvel's color */
+    display: inline-block;
+    vertical-align: top;
+    max-width: 432px;
+    margin-left: 6em;
   }
 
   .timeline-info small {
-    color: #5b5b5b; /* Marvel's color */
+    color: #474559;
+    font-size: 16px;
     font-weight: bold;
     display: inline-block;
+    vertical-align: middle;
     margin-left: 15px;
   }
-
-  .timeline-info p {
-    margin-top: 10px;
-    color: #484848; /* Marvel's color */
-  }
-
-  .timeline-line {
-    position: absolute;
-    background-color: #ffc200; /* Marvel's color */
-    width: 3px;
-    top: 50%;
-    left: 40px;
-    height: 100%;
-    transform: translateY(-50%);
-  }
 </style>
+
 
 <!-- Your HTML content -->
 <section id="services" class="services">
