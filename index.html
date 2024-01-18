@@ -309,9 +309,9 @@
       <div class="col-md-6">
         <div class="bg-white p-4 text-start">
           <h2 class="fw-bold text-capitalize text-center">
-            Work Experience
-            <button class="btn btn-link" onclick="toggleTimeline()">Show Timeline</button>
-          </h2>
+    Work Experience
+    <button class="btn btn-link" onclick="toggleTimeline()">Open Curtain</button>
+  </h2>
           <div id="timeline" style="display:none;" class="animate__animated animate__fadeIn">
             <!-- Your animated timeline content -->
             <div class="timeline">
@@ -360,7 +360,15 @@
 <script>
   function toggleTimeline() {
     var timeline = document.getElementById('timeline');
-    timeline.style.display = (timeline.style.display === 'none') ? 'block' : 'none';
+    var curtainButton = document.getElementById('curtainButton');
+
+    if (timeline.style.display === 'none') {
+      timeline.style.display = 'block';
+      curtainButton.innerText = 'Close Curtain';
+    } else {
+      timeline.style.display = 'none';
+      curtainButton.innerText = 'Open Curtain';
+    }
   }
 </script>
 
