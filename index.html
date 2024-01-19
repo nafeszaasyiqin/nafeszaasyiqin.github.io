@@ -500,9 +500,9 @@
     </div>
 
  <style>
-		/*** Mobile view disabled to get (almost) the desired thumbnail @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-		***/:root {
-			--c1: #2187e7;
+	 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+		:root {
+			--c1: #ffc107;
 			--b2: #222;
 			--b3: #333;
 			--w1: #fff;
@@ -1041,42 +1041,43 @@
 			/*** Uncomment below code to add the media query for mobile view ***/
 			
 			
-			@media only screen and (max-width: 768px) {
-				.content { height: 60vh; }
-				.profile-skills {
-					flex-direction: row;
-			    flex-wrap: wrap;
-					top: 20px;
-				}
-				.profile-skills > div {
-					width: 98% !important;
-				}
-				.profile-skills > div:nth-child(2), 
-				.profile-skills > div:nth-child(3) {
-					margin-top: 120px;
-				}
-				ul.skills li:after {
-					width: calc(calc(var(--per) * 1%) - 2px);
-				}
-				ul.skills li span:before {
-					transition: var(--t1);
-					right: calc(calc(96.5 - var(--per)) * 1%);
-					opacity: 1;
-					border-right-color: #2187e7;
-				}
-				ul.skills2 li span:before {
-					border-right-color: #9acd32;
-				}
-				ul.skills3 li span:before {
-					border-right-color: #ff4500;
-				}
-				ul.skills li span:after {
-					transition: var(--t1);
-					right: calc(calc(calc(100 - var(--per)) * 1%) - 40px);
-					opacity: 1;
-					background: var(--c1);
-				}
+						@media only screen and (max-width: 768px) {
+			    .content { height: 60vh; }
+			    .profile-skills {
+			        flex-direction: row;
+			        flex-wrap: wrap;
+			        top: 20px;
+			    }
+			    .profile-skills > div {
+			        width: 98% !important;
+			    }
+			    .profile-skills > div:nth-child(2), 
+			    .profile-skills > div:nth-child(3) {
+			        margin-top: 120px;
+			    }
+			    ul.skills li:after {
+			        width: calc(calc(var(--per) * 1%) - 2px);
+			    }
+			    ul.skills li span:before {
+			        transition: var(--t1);
+			        right: calc(calc(96.5 - var(--per)) * 1%);
+			        opacity: 1;
+			        border-right-color: #2187e7;
+			    }
+			    ul.skills2 li span:before {
+			        border-right-color: #9acd32;
+			    }
+			    ul.skills3 li span:before {
+			        border-right-color: #ff4500;
+			    }
+			    ul.skills li span:after {
+			        transition: var(--t1);
+			        right: calc(calc(calc(100 - var(--per)) * 1%) - 40px);
+			        opacity: 1;
+			        background: var(--c1);
+			    }
 			}
+
 			
 }
     </style>
@@ -1090,11 +1091,11 @@
       <input type="checkbox" id="sk1">
       <label for="sk1"></label>
       <ul class="skills skills1">
-        <li class="sk-cms"><span>CMS</span></li>
-        <li class="sk-dtb"><span>DDBB</span></li>
-        <li class="sk-dis"><span>Design</span></li>
-        <li class="sk-pro"><span>Programing</span></li>
-        <li class="sk-ani"><span>Animation</span></li>
+        <li class="sk-cms"><span>Programming</span></li>
+        <li class="sk-dtb"><span>Data Analysis</span></li>
+        <li class="sk-dis"><span>Web Design</span></li>
+        <li class="sk-pro"><span>Full Stack Development</span></li>
+        <li class="sk-ani"><span>Database Management</span></li>
         <li class="more">
           <input type="checkbox" id="more-con"><label for="more-con"></label>
           <div><span>PHOTO</span><span>API</span><span>MAPS</span><span>VIDEO</span><span>CHARTS</span><span>RWD</span></div>
@@ -1105,14 +1106,14 @@
       <input type="checkbox" id="sk2">
       <label for="sk2"></label>
       <ul class="skills skills2">
-        <li class="sk-gim"><span>Gimp</span></li>
-        <li class="sk-ado"><span>Adobe&nbsp;CC</span></li>
-        <li class="sk-not"><span>Notepad++</span></li>
-        <li class="sk-tri"><span>Tridion</span></li>
-        <li class="sk-wor"><span>Wordpress</span></li>
+        <li class="sk-gim"><span>GitHub</span></li>
+        <li class="sk-ado"><span>PowerBI</span></li>
+        <li class="sk-not"><span>Rapid&nbsp;Miner</span></li>
+        <li class="sk-tri"><span>Jupyter</span></li>
+        <li class="sk-wor"><span>Pycharm</span></li>
         <li class="more">
           <input type="checkbox" id="more-pro"><label for="more-pro"></label>
-          <div><span>JOOMLA</span><span>DRUPAL</span><span>JIRA</span><span>TRELLO</span><span>FILEZILLA</span><span>GIT</span></div>
+          <div><span>VSCode</span><span>Google Colab</span><span>JIRA</span><span>TRELLO</span><span>FILEZILLA</span><span>GIT</span></div>
         </li>
       </ul>
     </div>
@@ -1120,14 +1121,14 @@
       <input type="checkbox" id="sk3">
       <label for="sk3"></label>
       <ul class="skills skills3">
-        <li class="sk-css"><span>CSS</span></li>
-        <li class="sk-htm"><span>HTML</span></li>
-        <li class="sk-jav"><span>JS</span></li>
-        <li class="sk-php"><span>PHP</span></li>
-        <li class="sk-sql"><span>SQL</span></li>
+        <li class="sk-css"><span>Java</span></li>
+        <li class="sk-htm"><span>C++</span></li>
+        <li class="sk-jav"><span>Python</span></li>
+        <li class="sk-php"><span>HTML</span></li>
+        <li class="sk-sql"><span>CSS</span></li>
         <li class="more">
           <input type="checkbox" id="more-len"><label for="more-len"></label>
-          <div><span>XHTML</span><span>XSL</span><span>XML</span><span>JSON</span><span>PUG</span><span>SASS</span></div>
+          <div><span>Javascript</span><span>SQL</span><span>XML</span><span>JSON</span><span>PL/SQL</span><span>SASS</span></div>
         </li>
       </ul>
     </div>
