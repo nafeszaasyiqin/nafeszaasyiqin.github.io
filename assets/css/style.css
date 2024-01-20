@@ -11063,9 +11063,6 @@ textarea.form-control-lg {
   transition-duration: 1s;
   transition-property: all;
 }
-.portfolio-box.hidden {
-  display: none;
-}
 
 
 .get-started {
