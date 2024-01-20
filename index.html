@@ -1232,7 +1232,7 @@
     <!-- START THE PORTFOLIO ITEMS  -->
     <div class="row">
       <div class="col-lg-4 col-md-6" onclick="window.location.href='https://www.linkedin.com/in/nafesza-asyiqin-b347b7206/'">
-        <div class="portfolio-box shadow hidden" data-categories="programming">
+        <div class="portfolio-box shadow d-none " data-categories="programming">
           <img src="https://media.licdn.com/dms/image/D562DAQGYa1d9fl5t1g/profile-treasury-image-shrink_800_800/0/1696998509554?e=1706360400&v=beta&t=sP4eQfFOalhlOBAlQr4AJJBUck8mcS2QGR-zAdGWmEs" alt="FINBUDDY" title="portfolio 1 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -1243,7 +1243,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6" onclick="window.location.href='https://colab.research.google.com/drive/1lmWClEVBel2LXrbGRY06zm8FT3xRAzge'">
-        <div class="portfolio-box shadow hidden"  data-categories="data-analytics">
+        <div class="portfolio-box shadow d-none"  data-categories="data-analytics">
        <img src="images/portfolio/portfolio-2.png" alt="QS WORLD RANKINGe" title="portfolio 3 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -1254,7 +1254,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6" onclick="window.location.href=' https://www.canva.com/design/DAFoQIqceV8/qqxQrBXHzqMUs3Iq9aa7dg/edit?utm_content=DAFoQIqceV8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'">
-        <div class="portfolio-box shadow hidden" data-categories="data-analytics" >
+        <div class="portfolio-box shadow d-none" data-categories="data-analytics" >
           <img src="images/portfolio/portfolio-3.jpg" alt="SENTIMENT ANALYSIS" title="portfolio 3 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -1265,7 +1265,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6"onclick="window.location.href='http://bit.ly/dataesthetix_dashboard'">
-        <div class="portfolio-box shadow hidden" data-categories="data-analytics">
+        <div class="portfolio-box shadow d-none" data-categories="data-analytics">
           <img src="images/portfolio/portfolio-4.jpg" alt="DATAVISUALIZATION" title="portfolio 4 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
@@ -1345,10 +1345,10 @@
       // Check if the item has the selected category
       if (category === 'all' || categories.includes(category)) {
         // Show the item
-        item.classList.remove('hidden');
+        item.classList.remove('d-none');
       } else {
         // Hide the item
-        item.classList.add('hidden');
+        item.classList.add('d-none');
       }
     });
 
@@ -1356,6 +1356,8 @@
     console.log('Filtering by category:', category);
   }
 </script>
+
+
 
 
 
