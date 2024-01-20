@@ -1,9 +1,4 @@
-# Bootstrap 5 Portfolio Template
+Portfolio Nur Nafesza Asyiqin
 
-### TEMPLATE SCREENSHOT
+![image](https://github.com/nafeszaasyiqin/nafeszaasyiqin.github.io/assets/106697359/7aea85c4-3615-4e6c-9fbb-bcc096c30cd7)
 
-### WEBSITE PREVIEW 
-
-[BOOTSTRAP 5 TEMPLATE PREVIEW ](https://bootstrap-5-website.netlify.app/)
-
-![Fullscreenshot](https://user-images.githubusercontent.com/11283502/116909562-0c139000-ac4d-11eb-8ae0-26b6d790981e.jpg) 
