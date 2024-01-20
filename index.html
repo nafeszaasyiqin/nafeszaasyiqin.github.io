@@ -1333,7 +1333,7 @@
       </div> -->
     </div>
   </div>
-	<script>
+<script>
   function filterProjects(category) {
     // Get all portfolio items
     var portfolioItems = document.querySelectorAll('.portfolio-box');
@@ -1351,8 +1351,12 @@
         item.style.display = 'none';
       }
     });
+
+    // Log for troubleshooting
+    console.log('Filtering by category:', category);
   }
 </script>
+
 
 
 </section>
