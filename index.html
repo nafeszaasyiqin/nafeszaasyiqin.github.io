@@ -1221,21 +1221,22 @@
     <!-- FILTER BUTTONS  -->
     <div class="row mt-5 mb-4 g-3 text-center">
       <div class="col-md-12">
-         <button class="btn btn-outline-primary" type="button">All</button>
-        <button class="btn btn-outline-primary" type="button">Programming</button>
-        <button class="btn btn-outline-primary" type="button">Data Analytics</button>
-        <button class="btn btn-outline-primary" type="button">Design</button>
+        <button class="btn btn-outline-primary" onclick="filterProjects('all')">All</button>
+    <button class="btn btn-outline-primary" onclick="filterProjects('programming')">Programming</button>
+    <button class="btn btn-outline-primary" onclick="filterProjects('data-analytics')">Data Analytics</button>
+    <button class="btn btn-outline-primary" onclick="filterProjects('design')">Design</button>
+
       </div>
     </div>
 
     <!-- START THE PORTFOLIO ITEMS  -->
     <div class="row">
       <div class="col-lg-4 col-md-6" onclick="window.location.href='https://www.linkedin.com/in/nafesza-asyiqin-b347b7206/'">
-        <div class="portfolio-box shadow">
+        <div class="portfolio-box shadow" data-categories="programming">
           <img src="https://media.licdn.com/dms/image/D562DAQGYa1d9fl5t1g/profile-treasury-image-shrink_800_800/0/1696998509554?e=1706360400&v=beta&t=sP4eQfFOalhlOBAlQr4AJJBUck8mcS2QGR-zAdGWmEs" alt="FINBUDDY" title="portfolio 1 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
-              <h4>FinBuddy 1</h4>
+              <h4>FinBuddy</h4>
               <p>Final Year Project</p>
             </div>
           </div>
@@ -1331,6 +1332,27 @@
       </div>
     </div>
   </div>
+	<script>
+  function filterProjects(category) {
+    // Get all portfolio items
+    var portfolioItems = document.querySelectorAll('.portfolio-box');
+
+    // Loop through each portfolio item
+    portfolioItems.forEach(function(item) {
+      var categories = item.getAttribute('data-categories').split(' ');
+
+      // Check if the item has the selected category
+      if (category === 'all' || categories.includes(category)) {
+        // Show the item
+        item.style.display = 'block';
+      } else {
+        // Hide the item
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+
 </section>
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////
