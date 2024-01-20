@@ -1338,26 +1338,19 @@
     // Get all portfolio items
     var portfolioItems = document.querySelectorAll('.portfolio-box');
 
-    // Create a new container for the filtered items
-    var newContainer = document.createElement('div');
-    newContainer.className = 'row';
-
     // Loop through each portfolio item
     portfolioItems.forEach(function(item) {
       var categories = item.getAttribute('data-categories').split(' ');
 
       // Check if the item has the selected category
       if (category === 'all' || categories.includes(category)) {
-        // Clone and append the visible item to the new container
-        var clonedItem = item.cloneNode(true);
-        newContainer.appendChild(clonedItem);
+        // Show the item
+        item.style.display = 'block';
+      } else {
+        // Hide the item
+        item.style.display = 'none';
       }
     });
-
-    // Replace the existing portfolio items with the new container
-    var portfolioContainer = document.getElementById('portfolio-items');
-    portfolioContainer.innerHTML = '';
-    portfolioContainer.appendChild(newContainer);
   }
 </script>
 
