@@ -539,9 +539,9 @@
 
     .skills .progress .progress-bar {
         width: 0px;
-        background: #EF233C;
+        background: #3fb60a;
         border-radius: 10px;
-        transition: 2s;
+	    transition: width 2s ease-out;
     }
 
     .skills .text a.btn {
@@ -554,7 +554,20 @@
         }
     }
 </style>
+	  
+<script>
+    // Wait for the document to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get all progress bars
+        var progressBars = document.querySelectorAll('.progress-bar');
 
+        // Animate each progress bar
+        progressBars.forEach(function(bar) {
+            var percentage = bar.getAttribute('aria-valuenow');
+            bar.style.width = percentage + '%';
+        });
+    });
+</script>
 	  
 <div class="row align-items-center">
 <div class="row">
