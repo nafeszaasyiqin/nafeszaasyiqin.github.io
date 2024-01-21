@@ -545,9 +545,10 @@
 	
     }
 
-	 .skills .progress.animate .progress-bar {
-        transition: width 2s ease-out;
-    }
+	.skills .progress.animate .progress-bar {
+    transition: width 2s ease-out;
+}
+
 
     .skills .text a.btn {
         margin-top: 15px;
@@ -567,9 +568,9 @@
 	  
 <script>
     // Wait for the document to be fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get all progress bars
-        var progressBars = document.querySelectorAll('.progress-bar');
+	document.addEventListener("DOMContentLoaded", function () {
+    console.log("Document fully loaded!");
+     var progressBars = document.querySelectorAll('.progress-bar');
 
         // Delay the addition of 'animate' class to allow styles to be applied
         setTimeout(function () {
@@ -578,7 +579,8 @@
                 bar.classList.add('animate');
             });
         }, 100);
-    });
+});
+
 </script>
 
 	  
