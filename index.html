@@ -571,13 +571,13 @@
         // Get all progress bars
         var progressBars = document.querySelectorAll('.progress-bar');
 
-        // Trigger the animation by setting the width to the percentage value
+        // Add 'animate' class to trigger the CSS transition
         progressBars.forEach(function (bar) {
-            var percentage = bar.getAttribute('aria-valuenow');
-            bar.style.width = percentage + '%';
+            bar.classList.add('animate');
         });
     });
 </script>
+
 	  
 <div class="row align-items-center">
 <div class="row">
