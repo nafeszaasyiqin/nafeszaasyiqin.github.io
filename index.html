@@ -535,6 +535,7 @@
         height: 10px;
         border-radius: 10px;
         background: #dddddd;
+	     overflow: hidden; /* Ensure overflow is hidden */
     }
 
     .skills .progress .progress-bar {
@@ -570,9 +571,8 @@
         // Get all progress bars
         var progressBars = document.querySelectorAll('.progress-bar');
 
-        // Add 'animate' class to trigger the animation
+        // Trigger the animation by setting the width to the percentage value
         progressBars.forEach(function (bar) {
-            bar.parentNode.classList.add('animate');
             var percentage = bar.getAttribute('aria-valuenow');
             bar.style.width = percentage + '%';
         });
