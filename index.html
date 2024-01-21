@@ -512,73 +512,67 @@
         margin-bottom: 30px;
     }
 	
-    .skills.new-style {
-        margin-bottom: 0;
-    }
-
-    .skills .skill-name {
-        margin-top: 15px;
-    }
-
-    .skills .skill-name p {
-        display: inline-block;
-        margin-bottom: 5px;
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .skills .skill-name p:last-child {
-        float: right;
-    }
-
-    .skills .progress {
-        height: 10px;
-        border-radius: 10px;
-        background: #dddddd;
-	     overflow: hidden; /* Ensure overflow is hidden */
-    }
-
-    .skills .progress .progress-bar {
-        width: 0px;
-        background: #3fb60a;
-        border-radius: 10px;
-	
-    }
-
-	.skills .progress.animate .progress-bar {
-    transition: width 2s ease-out;
+   .container.new-style  {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f1f1f1;
 }
 
+.container .progress-container {
+    margin-bottom: 25px;
+}
 
-    .skills .text a.btn {
-        margin-top: 15px;
-    }
+.container .progress-container h4 {
+    margin: 0 0 15px 15px;
+    letter-spacing: .5px;
+}
 
+.container .progress-container .progress-bar {
+    position: relative;
+    width: 500px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 3px 4px 5px 0px rgba(204 185 185 / .75);
+}
+
+.container .progress-container .progress-bar span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgba(76, 175, 80, 1) 50%, rgba(50, 222, 132, 1) 100%);
+    transition: width .5s linear;
+}
+	
      @media (max-width: 991.98px) {
         .column {
             width: 100%; /* Full width for smaller screens */
             margin-bottom: 15px; /* Adjust margin as needed */
         }
 
-        .skills .content {
+        .container.content {
             padding: 15px; /* Adjust padding as needed */
         }
     }
 </style>
 	  
 <script>
-    // Wait for the document to be fully loaded
-	document.addEventListener("DOMContentLoaded", function () {
-    console.log("Document fully loaded!");
-     var progressBars = document.querySelectorAll('.progress-bar');
+   const spans = document.querySelectorAll('.progress-bar span');
 
-        // Delay the addition of 'animate' class to allow styles to be applied
-        setTimeout(function () {
-            // Add 'animate' class to trigger the CSS transition
-            progressBars.forEach(function (bar) {
-                bar.classList.add('animate');
-            });
-        }, 100);
+spans.forEach((span) => {
+    span.style.width = span.dataset.width;
+    span.innerHTML = span.dataset.width;
 });
 
 </script>
@@ -586,54 +580,39 @@
 	  
 <div class="row align-items-center">
 <div class="row">
-    <div class="column">
-    <div class="skills new-style">
-        <div class="skill-name">
-            <p>Web Design</p><p>85%</p>
+     <div class="container new-style">
+        <div class="progress-container">
+            <h4>HTML</h4>
+            <div class="progress-bar">
+                <span data-width="90%"></span>
+            </div>
         </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+        <div class="progress-container">
+            <h4>CSS</h4>
+            <div class="progress-bar">
+                <span data-width="80%"></span>
+            </div>
         </div>
-  </div>  </div> 
-
-
-    <div class="column">
-    <div class="skills new-style">
-        <div class="skill-name">
-            <p>Web Development</p><p>95%</p>
+        <div class="progress-container">
+            <h4>JavaScript</h4>
+            <div class="progress-bar">
+                <span data-width="70%"></span>
+            </div>
         </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+        <div class="progress-container">
+            <h4>BootStrap</h4>
+            <div class="progress-bar">
+                <span data-width="60%"></span>
+            </div>
         </div>
- </div>  </div> 
-
-	    
-    <div class="column">
-    <div class="skills new-style">
-        <div class="skill-name">
-            <p>Apps Design</p><p>90%</p>
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-        </div> </div>  </div> 
+    </div>
 </div> 
-	<div class="row">
-    <div class="column">
-    <div class="skills new-style">
-        <div class="skill-name">
-            <p>Apps Development</p><p>85%</p>
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
-        </div>
-    
-</div> </div> </div> 
+
 	    
 </div>
 
 
-	 
-    </div>
+
 
 	  
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
