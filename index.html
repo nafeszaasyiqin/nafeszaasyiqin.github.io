@@ -541,28 +541,38 @@
         width: 0px;
         background: #3fb60a;
         border-radius: 10px;
-	    transition: width 2s ease-out;
+	
+    }
+
+	 .skills .progress.animate .progress-bar {
+        transition: width 2s ease-out;
     }
 
     .skills .text a.btn {
         margin-top: 15px;
     }
 
-    @media (max-width: 991.98px) {
+     @media (max-width: 991.98px) {
+        .column {
+            width: 100%; /* Full width for smaller screens */
+            margin-bottom: 15px; /* Adjust margin as needed */
+        }
+
         .skills .content {
-            padding: 45px 15px 0 15px;
+            padding: 15px; /* Adjust padding as needed */
         }
     }
 </style>
 	  
 <script>
     // Wait for the document to be fully loaded
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         // Get all progress bars
         var progressBars = document.querySelectorAll('.progress-bar');
 
-        // Animate each progress bar
-        progressBars.forEach(function(bar) {
+        // Add 'animate' class to trigger the animation
+        progressBars.forEach(function (bar) {
+            bar.parentNode.classList.add('animate');
             var percentage = bar.getAttribute('aria-valuenow');
             bar.style.width = percentage + '%';
         });
