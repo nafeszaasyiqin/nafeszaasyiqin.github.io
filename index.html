@@ -613,21 +613,47 @@
 </div> </div> </div> 
 	    
 </div>
-	  <script>
+	 <script>
     // Wait for the document to be fully loaded
     document.addEventListener("DOMContentLoaded", function () {
         // Get all progress bars
         var progressBars = document.querySelectorAll('.progress-bar');
 
-        // Delay the addition of 'animate' class to allow styles to be applied
-        setTimeout(function () {
-            // Add 'animate' class to trigger the CSS transition
-            progressBars.forEach(function (bar) {
-                bar.classList.add('animate');
-            });
-        }, 100);
+        // Set the animation duration in milliseconds
+        var animationDuration = 2000;
+
+        // Iterate over each progress bar
+        progressBars.forEach(function (bar) {
+            // Get the target width from the aria-valuenow attribute
+            var targetWidth = parseFloat(bar.getAttribute('aria-valuenow'));
+
+            // Calculate the step size for animation
+            var stepSize = (targetWidth / animationDuration) * 16; // 16ms is the standard time between frames
+
+            // Set the initial width to 0
+            bar.style.width = '0%';
+
+            // Function to update the width over time
+            function updateWidth() {
+                // Increase the width by the step size
+                var currentWidth = parseFloat(bar.style.width) + stepSize;
+
+                // Update the width style property
+                bar.style.width = currentWidth + '%';
+
+                // Continue the animation until the target width is reached
+                if (currentWidth < targetWidth) {
+                    // Schedule the next frame
+                    requestAnimationFrame(updateWidth);
+                }
+            }
+
+            // Start the animation
+            updateWidth();
+        });
     });
 </script>
+
 
 
 	 
