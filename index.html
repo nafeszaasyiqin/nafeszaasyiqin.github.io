@@ -571,10 +571,13 @@
         // Get all progress bars
         var progressBars = document.querySelectorAll('.progress-bar');
 
-        // Add 'animate' class to trigger the CSS transition
-        progressBars.forEach(function (bar) {
-            bar.classList.add('animate');
-        });
+        // Delay the addition of 'animate' class to allow styles to be applied
+        setTimeout(function () {
+            // Add 'animate' class to trigger the CSS transition
+            progressBars.forEach(function (bar) {
+                bar.classList.add('animate');
+            });
+        }, 100);
     });
 </script>
 
