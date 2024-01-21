@@ -613,9 +613,9 @@
 </div> </div> </div> 
 	    
 </div>
-	 <script>
-    // Wait for the document to be fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
+	<script>
+    // Function to handle the animation
+    function animateProgressBars() {
         // Get all progress bars
         var progressBars = document.querySelectorAll('.progress-bar');
 
@@ -651,8 +651,15 @@
             // Start the animation
             updateWidth();
         });
-    });
+    }
+
+    // Wait for the document to be fully loaded
+    document.addEventListener("DOMContentLoaded", animateProgressBars);
+
+    // Listen for the scroll event to trigger the animation
+    window.addEventListener('scroll', animateProgressBars);
 </script>
+
 
 
 
