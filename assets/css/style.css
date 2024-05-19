@@ -10862,11 +10862,11 @@ textarea.form-control-lg {
 }
 
 .gradient {
-  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+   background:   linear-gradient(to right, rgb(0 0 0 / 95%), rgb(0 59 170 / 95%));
 }
 
 .menu {
-  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+    background:   linear-gradient(to right, rgb(0 0 0 / 95%), rgb(0 59 170 / 95%));
 }
 .menu li {
   padding: 0 0.7rem;
