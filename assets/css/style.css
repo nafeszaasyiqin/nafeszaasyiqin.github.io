@@ -10968,7 +10968,7 @@ textarea.form-control-lg {
 .testimonials {
   position: relative;
   padding: 0;
-  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  background:   linear-gradient(to right, rgb(0 0 0 / 95%), rgb(0 59 170 / 95%));
 }
 .testimonials__card {
   background-color: rgba(255, 255, 255, 0.8);
