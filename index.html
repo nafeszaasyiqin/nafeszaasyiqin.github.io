@@ -270,40 +270,38 @@
     color: #ffc600; /* Change the text color on hover */
   }
 
-	 /* Initially hide the About section content */
-    #about-content {
-      display: none;
-    }
+/* Initially hide the About section content */
+  #about-content {
+    display: none;
+  }
 
-    /* Style for "Read More About Me" text */
-    .read-more-link {
-      color: #26bbf0;
-      cursor: pointer;
-      text-decoration: underline;
-    }
+  /* Style for "Read More About Me" text */
+  .read-more-link {
+    color: #26bbf0;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 
-    .read-more-link:hover {
-      color: #00ff00;
-    }
-	
+  .read-more-link:hover {
+    color: #00ff00;
+  }
 </style>
 
- <!-- Read More About Me text link to toggle the About section -->
-  <p class="read-more-link" onclick="toggleAboutSection()">Read More About Me >>> </p>
+<!-- Read More About Me text link to toggle the About section -->
+<p class="read-more-link" onclick="toggleAboutSection()">Read More About Me >>> </p>
 
-  <!-- About section content, initially hidden -->
-  <div id="about-content">
-    <p>Welcome to the About Me section! Here you can view my story, journey, and experiences.</p>
-  </div>
+<!-- About section content, initially hidden -->
+<div id="about-content">
+  <p>Welcome to the About Me section! Here you can view my story, journey, and experiences.</p>
+</div>
 
-  <script>
-    function toggleAboutSection() {
-      const aboutContent = document.getElementById('about-content');
-      // Toggle the display property between 'none' and 'block'
-      aboutContent.style.display = (aboutContent.style.display === 'none' || aboutContent.style.display === '') ? 'block' : 'none';
-    }
-  </script>
-
+<script>
+  function toggleAboutSection() {
+    const aboutContent = document.getElementById('about-content');
+    // Toggle the display property between 'none' and 'block'
+    aboutContent.style.display = (aboutContent.style.display === 'none' || aboutContent.style.display === '') ? 'block' : 'none';
+  }
+</script>
 
 <!-- Your HTML content --> 
 	<div class="row text-center">
