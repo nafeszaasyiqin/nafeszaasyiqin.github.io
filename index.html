@@ -201,7 +201,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////-->
 <section id="about" class="about">
 
-<p class="read-more-link" onclick="toggleAboutSection()">Read More About Me >>> </p>
+<div class="row text-center">
+      <h1 class="display-3 fw-bold" onclick="toggleAboutSection()">Read More About Me</h1>
+</div>	
 
 <div id="about-content">
 <!-- Include Animate.css in the head section of your HTML -->
@@ -279,21 +281,10 @@
     display: none;
   }
 
-  /* Style for "Read More About Me" text */
-  .read-more-link {
-    color: #26bbf0;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .read-more-link:hover {
-    color: #00ff00;
-  }
 </style>
 
 
 
-  <p>Welcome to the About Me section! Here you can view my story, journey, and experiences.</p>
 
 
 <script>
@@ -307,6 +298,11 @@
 <!-- Your HTML content --> 
 	<div class="row text-center">
       <h1 class="display-3 fw-bold">About Me</h1>
+		<div class="heading-line"></div>
+      <p class="lead">
+        Here you can view my story, journey, and experiences
+      </p>
+    </div>
       <div class="heading-line mb-1"></div>
     </div>
 	  
