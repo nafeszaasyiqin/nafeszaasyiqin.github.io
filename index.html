@@ -51,16 +51,27 @@
     }
 
     button {
-      background-color: var(--button-background);
-      color: var(--button-text-color);
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-    }
+	  background-color: transparent;  /* Remove background color */
+	  color: var(--button-text-color);  /* Use the text color based on theme */
+	  border: none;  /* Remove border */
+	  padding: 10px 15px;
+	  cursor: pointer;
+	  }
+	
+	   button:hover {
+	  background-color: transparent;  /* No background on hover */
 
-    button:hover {
-      background-color: #555;
-    }
+	/* Style for "Read More About Me" link */
+	.read-more-link {
+	  color: var(--link-color);
+	  cursor: pointer;
+	  text-decoration: underline;
+	}
+	
+	.read-more-link:hover {
+	  color: var(--link-hover-color);
+	}
+		  
   </style>
 	
 </head>
@@ -340,16 +351,6 @@ toggleButton.addEventListener('click', () => {
   #about-content {
     display: none;
   }
-
-.read-more-link {
-  color: #000;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.read-more-link:hover {
-  color: #26bbf0;
-}
 	
 </style>
 
