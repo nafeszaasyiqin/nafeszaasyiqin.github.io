@@ -45,7 +45,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="#work">Work</a></li>
-	  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+	  <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="toggleAboutSection()">About</a></li>
         </ul>
 	      
         <!--<button type="button" class="rounded-pill btn-rounded">
@@ -107,6 +107,10 @@
       display: inline-block;
     }
   }
+
+	  #about {
+    display: none;
+  }
 </style>
 
 
@@ -157,9 +161,6 @@
     text-shadow: 0 0 10px #26bbf0, 0 0 20px rgb(255 128 0 / 70%), 0 0 30px rgb(0 107 255 / 70%)
   }
 
-  #about {
-    display: none;
-  }
 </style>
           
      <!-- Button to request the resume -->
@@ -168,17 +169,8 @@
   <span><i class="fas fa-envelope"></i></span>
 </button>
 
- <button type="button" class="rounded-pill btn-rounded" onclick="toggleAboutSection()">
-  Read More About Me
-  <span><i class="fas fa-arrow-down"></i></span>
-</button>
 
 <script>
- function toggleAboutSection() {
-    const aboutSection = document.getElementById('about');
-    // Toggle the display property between 'none' and 'block'
-    aboutSection.style.display = (aboutSection.style.display === 'none' || aboutSection.style.display === '') ? 'block' : 'none';
-  }
 	
   function requestResume() {
     const subject = encodeURIComponent("Request for Resume");
@@ -279,7 +271,40 @@
   .timeline-info h3 span:hover {
     color: #ffc600; /* Change the text color on hover */
   }
+
+	 /* Initially hide the About section content */
+    #about-content {
+      display: none;
+    }
+
+    /* Style for "Read More About Me" text */
+    .read-more-link {
+      color: #26bbf0;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .read-more-link:hover {
+      color: #00ff00;
+    }
+	
 </style>
+
+ <!-- Read More About Me text link to toggle the About section -->
+  <p class="read-more-link" onclick="toggleAboutSection()">Read More About Me >>> </p>
+
+  <!-- About section content, initially hidden -->
+  <div id="about-content">
+    <p>Welcome to the About Me section! Here you can view my story, journey, and experiences.</p>
+  </div>
+
+  <script>
+    function toggleAboutSection() {
+      const aboutContent = document.getElementById('about-content');
+      // Toggle the display property between 'none' and 'block'
+      aboutContent.style.display = (aboutContent.style.display === 'none' || aboutContent.style.display === '') ? 'block' : 'none';
+    }
+  </script>
 
 
 <!-- Your HTML content --> 
