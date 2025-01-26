@@ -145,27 +145,24 @@
 
 <h1 class="display-2">
           <span class="display-2--description lh-base">
-    	  I'm Nafesza Asyiqin, and since I was a child, I’ve been captivated by the mysteries of how things work—each gadget, each program, a little puzzle waiting to be solved. 
-	  That spark never left me. It led me to pursue a degree in Computer Science, where every line of code felt like uncovering a new piece of a grand design.
-	  Though I’m just starting out, I’m determined to turn this passion into reality and take my first steps toward becoming a developer. 
+    	      I'm Nafesza Asyiqin. Since childhood, I’ve been curious about how things work, which inspired me to pursue a degree in Computer Science.
+	      I’m still at the beginning of my journey, but I’m eager to grow and make my dream of becoming a developer a reality.
+ 
          </span>
  </h1>
           
-         <button type="button" class="rounded-pill btn-rounded" onclick="togglePDF()">
-  View Resume
-  <span><i class="fas fa-arrow-right"></i></span>
+     <!-- Button to request the resume -->
+<button type="button" class="rounded-pill btn-rounded" onclick="requestResume()">
+  Request Resume
+  <span><i class="fas fa-envelope"></i></span>
 </button>
 
-<!-- Embed the PDF using the iframe tag -->
-<div id="pdf-container" style="display:none;">
-  <iframe src="assets/resume.pdf" width="100%" height="600px" frameborder="0"></iframe>
-</div>
-
 <script>
-  function togglePDF() {
-    var pdfContainer = document.getElementById('pdf-container');
-    // Toggle the display property between 'none' and 'block'
-    pdfContainer.style.display = (pdfContainer.style.display === 'none') ? 'block' : 'none';
+  function requestResume() {
+    const subject = encodeURIComponent("Request for Resume");
+    const body = encodeURIComponent("Hello Nafesza,\n\nI would like to request a copy of your resume.\n\nThank you.");
+    const mailtoLink = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
   }
 </script>
 
