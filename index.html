@@ -202,7 +202,7 @@
 <section id="about" class="about">
 
 <div class="row text-center">
-      <h1 class="display-3 fw-bold" onclick="toggleAboutSection()">Read More About Me</h1>
+      <h1 class="display-3 fw-bold read-more-link" onclick="toggleAboutSection()">Read More About Me</h1>
 </div>	
 
 <div id="about-content">
@@ -281,6 +281,16 @@
     display: none;
   }
 
+.read-more-link {
+  color: #26bbf0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.read-more-link:hover {
+  color: #00ff00;
+}
+	
 </style>
 
 
@@ -297,8 +307,7 @@
 
 <!-- Your HTML content --> 
 	<div class="row text-center">
-      <h1 class="display-3 fw-bold">About Me</h1>
-		<div class="heading-line"></div>
+     
       <p class="lead">
         Here you can view my story, journey, and experiences
       </p>
@@ -366,6 +375,17 @@
 
        <div id="working" class="timeline">
   <!-- MY WORKING EXPERIENCES -->
+ <div class="timeline-wrapper">
+    <div class="timeline-yr">
+      <span>Current</span>
+    </div>
+      <div class="timeline-info">
+                  <h3><span>Application Performance Management Engineer </span><small> Core Consulting, Cyberjaya </small></h3>
+                  <p></p>
+                </div>
+    <div class="timeline-line"></div>
+  </div>
+  <!-- ################################################################################################ -->	       
   <div class="timeline-wrapper">
     <div class="timeline-yr">
       <span>2024</span>
@@ -443,9 +463,20 @@
 
     <!-- START THE PORTFOLIO ITEMS  -->
     <div class="row">
+	<div class="col-lg-4 col-md-6 " onclick="window.location.href='https://private-user-images.githubusercontent.com/106697359/398550638-d160ecc7-0ea3-4aac-8ba8-0ccac4d91921.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzc4NzcxNTgsIm5iZiI6MTczNzg3Njg1OCwicGF0aCI6Ii8xMDY2OTczNTkvMzk4NTUwNjM4LWQxNjBlY2M3LTBlYTMtNGFhYy04YmE4LTBjY2FjNGQ5MTkyMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMTI2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDEyNlQwNzM0MThaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hNGJmMGY2NDEwNjEyNzdhMmU5M2MwMTM2YmEwYjU1ZDA5YzIxNGQyOGRiMDg4NTc3MzFlMGFjNDc4NjVhN2NjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.aLHZeMD3z_zc-IleP3dOqrr27in8rOgTBAfmXzpK4D8'">
+        <div class="portfolio-box shadow  " data-categories="programming">
+          <img src="images/portfolio/portfolio-1.jpeg" alt="ATTENDEX" title="portfolio 1 picture" class="img-fluid">
+          <div class="portfolio-info">
+            <div class="caption">
+              <h4>Attendex:Spring Boot-based Student Attendance Management System</h4>
+              <p>Capstone Project</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col-lg-4 col-md-6 " onclick="window.location.href='https://media.licdn.com/dms/image/D562DAQEWpxa5CzVz8w/profile-treasury-image-shrink_1280_1280/0/1721636823989?e=1722862800&v=beta&t=RjVweZR60IroH-2VgQn38I7l66Sl4SiAwlbEOpRwktQ'">
         <div class="portfolio-box shadow  " data-categories="programming">
-          <img src="images/portfolio/portfolio-1.jpeg" alt="FINBUDDY" title="portfolio 1 picture" class="img-fluid">
+          <img src="images/portfolio/portfolio-1.jpeg" alt="FINBUDDY" title="portfolio 2 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
               <h4>FinBuddy:Web Based Student Financial Aid RS</h4>
@@ -467,7 +498,7 @@
       </div>
       <div class="col-lg-4 col-md-6" onclick="window.location.href=' https://www.canva.com/design/DAFoQIqceV8/qqxQrBXHzqMUs3Iq9aa7dg/edit?utm_content=DAFoQIqceV8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'">
         <div class="portfolio-box shadow " data-categories="data-analytics" >
-          <img src="images/portfolio/portfolio-3.jpg" alt="SENTIMENT ANALYSIS" title="portfolio 3 picture" class="img-fluid">
+          <img src="images/portfolio/portfolio-3.jpg" alt="SENTIMENT ANALYSIS" title="portfolio 4 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
               <h4>SENTIMENT ANALYSIS ON GRAB COMPANY REVIEW</h4>
@@ -478,7 +509,7 @@
       </div>
       <div class="col-lg-4 col-md-6 "onclick="window.location.href='http://bit.ly/dataesthetix_dashboard'">
         <div class="portfolio-box shadow " data-categories="data-analytics">
-          <img src="images/portfolio/portfolio-4.jpg" alt="DATAVISUALIZATION" title="portfolio 4 picture" class="img-fluid">
+          <img src="images/portfolio/portfolio-4.jpg" alt="DATAVISUALIZATION" title="portfolio 5 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
               <h4>Data Visualization AIRLINE PASSENGER SATISFACTION</h4>
@@ -490,7 +521,7 @@
 	    
 	    <div class="col-lg-4 col-md-6 "onclick="window.location.href='https://app.pentas.io/user/0xc47B118d42608f256D4d0B19987F367833B3c165'">
         <div class="portfolio-box shadow " data-categories="design">
-          <img src="https://thedaily.case.edu/wp-content/uploads/2021/04/GettyImages-1309739869-2048x1152.jpg" alt="NFT" title="portfolio 5 picture" class="img-fluid">
+          <img src="https://thedaily.case.edu/wp-content/uploads/2021/04/GettyImages-1309739869-2048x1152.jpg" alt="NFT" title="portfolio 6 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
               <h4>Pentas NFT Creation</h4>
@@ -502,7 +533,7 @@
 
 	      <div class="col-lg-4 col-md-6 "onclick="window.location.href='https://www.instagram.com/p/Chd3emLPpuK/?igsh=MzRlODBiNWFlZA=='">
         <div class="portfolio-box shadow " data-categories="design">
-          <img src="images/portfolio/portfolio-6.jpeg" alt="Digital Drawing" title="portfolio 6 picture" class="img-fluid">
+          <img src="images/portfolio/portfolio-6.jpeg" alt="Digital Drawing" title="portfolio 7 picture" class="img-fluid">
           <div class="portfolio-info">
             <div class="caption">
               <h4>Bahtera Siber MY Poster Design</h4>
